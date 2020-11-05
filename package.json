@@ -1,0 +1,20 @@
+{
+  "name": "log",
+  "version": "0.0.1",
+  "description": "A log system for my personal projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "personal-logger",
+    "console",
+    "dev"
+  ],
+  "author": "Lag01",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "util": "^0.12.2"
+  }
+}
