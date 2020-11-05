@@ -35,7 +35,7 @@ exports.log = (args, type, showTime) => {
         if(type.bgColor)bgColor = type.bgColor;
         if(type.textColor)textColor = type.textColor;
         let CUSTOM = (text) => { let newText = chalk.bgHex(bgColor)(text); return chalk.hex(textColor)(newText) }
-        if(typeof args === 'string')args = args.replace(/[\r\n]+/g, `\n${INFO('[INFO]'.padEnd(9, " "))} `);
+        if(typeof args === 'string')args = args.replace(/[\r\n]+/g, `\n${INFO(' [INFO] '.padEnd(9, " "))} `);
         if(showTime){
                 console.log(`${timeStr} ${CUSTOM(` ${typename} `.padEnd(9, " "))} ${args}`);
             }else{    
@@ -45,47 +45,47 @@ exports.log = (args, type, showTime) => {
     }else {
     switch(type){
         case 'INFO':{
-            if(typeof args === 'string')args = args.replace(/[\r\n]+/g, `\n${INFO('[INFO]'.padEnd(9, " "))} `);
+            if(typeof args === 'string')args = args.replace(/[\r\n]+/g, `\n${INFO(' [INFO] '.padEnd(9, " "))} `);
             if(showTime){
-                console.log(`${timeStr} ${INFO('[INFO]'.padEnd(9, " "))} ${args}`);
+                console.log(`${timeStr} ${INFO(' [INFO] '.padEnd(9, " "))} ${args}`);
             }else{
-            console.log(`${INFO('[INFO]'.padEnd(9, " "))} ${args}`);
+            console.log(`${INFO(' [INFO] '.padEnd(9, " "))} ${args}`);
             }
             return;
         }
         case 'DEBUG':{
-            if(typeof args === 'string')args = args.replace(/[\r\n]+/g, `\n${DEBUG('[DEBUG]'.padEnd(9, " "))} `);
+            if(typeof args === 'string')args = args.replace(/[\r\n]+/g, `\n${DEBUG(' [DEBUG] '.padEnd(9, " "))} `);
             if(showTime){
-                console.log(`${timeStr} ${DEBUG('[DEBUG]'.padEnd(9, " "))} ${args}`);
+                console.log(`${timeStr} ${DEBUG(' [DEBUG] '.padEnd(9, " "))} ${args}`);
             }else{
-            console.log(`${DEBUG('[DEBUG]'.padEnd(9, " "))} ${args}`);
+            console.log(`${DEBUG(' [DEBUG] '.padEnd(9, " "))} ${args}`);
             }
             return;
         }
         case 'WARN':{
-            if(typeof args === 'string')args = args.replace(/[\r\n]+/g, `\n${WARN('[WARN]'.padEnd(9, " "))} `);
+            if(typeof args === 'string')args = args.replace(/[\r\n]+/g, `\n${WARN(' [WARN] '.padEnd(9, " "))} `);
             if(showTime){
-                console.log(`${timeStr} ${WARN('[WARN]'.padEnd(9, " "))} ${args}`);
+                console.log(`${timeStr} ${WARN(' [WARN] '.padEnd(9, " "))} ${args}`);
             }else{
-            console.log(`${WARN('[WARN]'.padEnd(9, " "))} ${args}`);
+            console.log(`${WARN(' [WARN] '.padEnd(9, " "))} ${args}`);
             }
             return;
         }
         case 'ERROR':{
-            if(typeof args === 'string')args = args.replace(/[\r\n]+/g, `\n${ERROR('[ERROR]'.padEnd(9, " "))} `);
+            if(typeof args === 'string')args = args.replace(/[\r\n]+/g, `\n${ERROR(' [ERROR] '.padEnd(9, " "))} `);
             if(showTime){
-                console.log(`${timeStr} ${ERROR('[ERROR]'.padEnd(9, " "))} ${args}`);
+                console.log(`${timeStr} ${ERROR(' [ERROR] '.padEnd(9, " "))} ${args}`);
             }else{
-            console.log(`${ERROR('[ERROR]'.padEnd(9, " "))} ${args}`);
+            console.log(`${ERROR(' [ERROR] '.padEnd(9, " "))} ${args}`);
             }
             return;
         }
         default: {
-            if(typeof args === 'string')args = args.replace(/[\r\n]+/g, `\n${VERBOSE('[VERBOSE]'.padEnd(9, " "))} `);
+            if(typeof args === 'string')args = args.replace(/[\r\n]+/g, `\n${VERBOSE(' [VERBOSE] '.padEnd(9, " "))} `);
             if(showTime){
-                console.log(`${timeStr} ${VERBOSE('[VERBOSE]'.padEnd(9, " "))} ${args}`);
+                console.log(`${timeStr} ${VERBOSE(' [VERBOSE] '.padEnd(9, " "))} ${args}`);
             }else{
-            console.log(`${VERBOSE('[VERBOSE]'.padEnd(9, " "))} ${args}`);
+            console.log(`${VERBOSE(' [VERBOSE] '.padEnd(9, " "))} ${args}`);
             }
             return;
         };
